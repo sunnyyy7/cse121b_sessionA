@@ -5,7 +5,7 @@
 /* Step 2 - Variables */
 
 let fullName = 'Sunny Yeung';
-let currentyear = "2023 Sep 23";
+let currentyear = 2023;
 let profilePicture = 'images/IMG_1204 copy.jpg';
 
 
@@ -15,7 +15,7 @@ const nameElement = document.getElementById('name');
 const foodElement = document.getElementById('food');
 const yearElement = document.querySelector('#year');
 
-const imageElement = document.getElementById("image");
+const imageElement = document.getElementById('img');
 
 /* Step 4 - Adding Content */
 
@@ -27,15 +27,15 @@ imageElement.setAttribute('src', profilePicture);
 imageElement.setAttribute('alt', `profile image of ${fullNmae}`);
 /* Step 5 - Array */
 
-let favoriteFoods = ['DimSum', 'Fried Rice', 'Noddles', 'Pizza', 'Salad']
-foodElement.innerHTML = favoriteFoods.join();
+let favFoods = ['DimSum', 'Fried Rice', 'Noddles', 'Pizza', 'Salad']
+foodElement.innerHTML = favFoods.join();
 Food1 = 'Burrito';
-favoriteFoods.push(Food1);
-foodElement.innerHTML += `<br>${favoriteFoods}`;
-favoriteFoods.shift();
-foodElement.innerHTML += `<br>${favoriteFoods}`;
-favoriteFoods.pop();
-foodElement.innerHTML += `<br>${favoriteFoods}`;
+favFoods.push(Food1);
+foodElement.innerHTML += `<br>${favFoods}`;
+favFoods.shift();
+foodElement.innerHTML += `<br>${favFoods}`;
+favFoods.pop();
+foodElement.innerHTML += `<br>${favFoods}`;
 
 
 
