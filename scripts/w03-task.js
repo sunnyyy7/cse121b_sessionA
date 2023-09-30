@@ -2,6 +2,14 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
+function add (number1, number2) {
+    // functionbody
+    return number1 + number2;
+}
+
+let addNumber1 = Number(document.querySelector('#add1') .value);
+document.querySelector('#sum') .value = add(addNu,bner1, addNumber2);
+
 
 
 /* Function Expression - Subtract Numbers */
