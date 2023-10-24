@@ -1,11 +1,11 @@
 /* W05: Programming Tasks */
-const templesElement = document.quarySelector('temples');
+const templesElement = document.quarySelector('#temples');
 let templelist = [];
 
 const displayTemples = (temples) => {
-temples.forEach(temple => {
+    temples.forEach(temple => {
     let article = document.createElement('article');
-    let templeName = document.createElement('h3')
+    let templeName = document.createElement('h3');
     templeName.textContent = temple.templeName;
     let img = document.createElement('img');
     img.setAttribute('src', temple.imageUrl);
@@ -15,22 +15,22 @@ temples.forEach(temple => {
     article.appendChild(img);
 
     templesElement.appendChild(article);
-});
+    });
 }
 
 const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    templelist = await response.json();
+    templelist = await response.json();                                                                      
     displayTemples(templeList);
 };
 
-const reset = () => {
+const reset = () => {  
     templesElement.innerHTML = '';
 };
 
 const sortBy = (temples) => {
     reset();
-    switch (document .querySelector('#sortBy').value) {
+    switch (document.querySelector('#sortBy').value) {
         case "utah":
             displayTemples(temples.filter(temple => temple.location.includes("Uath")));
             break;
