@@ -24,13 +24,35 @@ const getTemples = async () => {
     displayTemples(templeList);
 };
 
+const reset = () => {
+    templesElement.innerHTML = '';
+};
+
+const sortBy = (temples) => {
+    reset();
+    switch (document .querySelector('#sortBy').value) {
+        case "utah":
+            displayTemples(temples.filter(temple => temple.location.includes("Uath")));
+            break;
+            case "noutah":
+                displayTemples(temples.filter(temple => !temple.location.includes("utah")));
+                break;
+                case "before1950":
+                    displayTemples(temples.filter(temple => temple.time))
+                    case "all":
+                        displayTemples(temples);
+                        break;
+
+    }
+    displayTemples(temples);
+}
 
 /* Declare and initialize global variables */
 
 
-/* async displayTemples Function */
+/* async displayTemples Function */           
 
-
+                                                                                              
 
 
 /* async getTemples Function using fetch()*/
