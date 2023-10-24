@@ -34,7 +34,7 @@ const sortBy = (temples) => {
         case "utah":
             displayTemples(temples.filter(temple => temple.location.includes("Uath")));
             break;
-            case "noutah":
+            case "notutah":
                 displayTemples(temples.filter(temple => !temple.location.includes("utah")));
                 break;
                 case "before1950":
@@ -44,9 +44,11 @@ const sortBy = (temples) => {
                         break;
 
     }
-    displayTemples(temples);
-}
+};
 
+getTemples();
+
+document.querySelector('#sortBy').addEventListener('change', () => sortBy(templelist));
 /* Declare and initialize global variables */
 
 
@@ -65,6 +67,6 @@ const sortBy = (temples) => {
 
 
 
-getTemples();
+
 
 /* Event Listener */
