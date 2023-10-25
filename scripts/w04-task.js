@@ -84,4 +84,3 @@ let myprofile = {
         document.querySelector('#places-lived') .appendChild(dl);
     });
 },
-
